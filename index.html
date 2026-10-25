@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORYVEX Détention — l'attente aux quais, prouvée et facturée</title>
+<meta name="description" content="Pour les transporteurs québécois : retrouvez l'attente aux quais que vos contrats permettent de facturer, avec un dossier de preuve pour chaque arrêt. Audit gratuit de vos trois derniers mois.">
+<meta name="theme-color" content="#16191D">
+<link rel="canonical" href="https://oryvex.ca/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:site_name" content="ORYVEX Détention">
+<meta property="og:title" content="ORYVEX Détention — l'attente aux quais, prouvée et facturée">
+<meta property="og:description" content="Pour les transporteurs québécois : retrouvez l'attente aux quais que vos contrats permettent de facturer, avec un dossier de preuve pour chaque arrêt. Audit gratuit des 3 derniers mois.">
+<meta property="og:url" content="https://oryvex.ca/">
+<meta property="og:image" content="https://oryvex.ca/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ORYVEX Détention : chaque heure d'attente prouvée, facturée, encaissée.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/symbole.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/publicsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Oswald";font-style:normal;font-weight:500 700;font-display:swap;src:url(assets/fonts/oswald-latin.woff2) format("woff2")}
+@font-face{font-family:"Public Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/publicsans-latin.woff2) format("woff2")}
+:root{
+  --asphalte:#16191D;--creme:#F5F2EB;--orange:#E8772E;
+  --papier:#FFFFFF;--texte:#16191D;--doux:#4A4F57;--ligne:#DDD8CC;--creme-2:#ECE7DA;
+  --titre:"Oswald","Arial Narrow","Helvetica Neue Condensed",Arial,sans-serif;
+  --corps:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --gouttiere:clamp(16px,5vw,32px);
+}
+*{box-sizing:border-box}
+html{color-scheme:light;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--creme);color:var(--texte);font:400 1rem/1.6 var(--corps)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.contenu{width:100%;max-width:1080px;margin:0 auto;padding:0 var(--gouttiere)}
+.etroit{max-width:720px}
+h1,h2,h3{font-family:var(--titre);font-weight:600;line-height:1.12;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.25rem,8.5vw,4.25rem);font-weight:700;text-transform:uppercase;letter-spacing:.005em}
+h2{font-size:clamp(1.75rem,5.5vw,2.5rem);text-transform:uppercase;letter-spacing:.01em}
+h3{font-size:1.25rem;letter-spacing:.01em}
+p{margin:0 0 1em}
+.sur-titre{font:600 .8125rem/1 var(--corps);letter-spacing:.14em;text-transform:uppercase;margin:0 0 .9rem;color:var(--doux)}
+.sombre .sur-titre{color:var(--orange)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:2px}
+.evitement{position:absolute;left:-999px;top:0;background:var(--orange);color:var(--asphalte);padding:.75rem 1rem;font-weight:700;z-index:10}
+.evitement:focus{left:var(--gouttiere);top:8px}
+
+/* En-tête */
+.entete{background:var(--asphalte);color:var(--creme)}
+.entete .contenu{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-top:14px;padding-bottom:14px}
+.entete img{height:34px;width:auto}
+.lien-contact{font-weight:600;font-size:.9375rem;text-decoration:none;border-bottom:2px solid var(--orange);padding:.5rem 0}
+
+/* Boutons */
+.bouton{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.85rem 1.6rem;background:var(--orange);color:var(--asphalte);
+  font:700 1.0625rem/1.2 var(--corps);text-decoration:none;border-radius:4px;border:2px solid var(--orange);transition:background-color .15s,color .15s}
+.bouton:hover{background:var(--creme);border-color:var(--creme)}
+.bouton-petit{min-height:44px;padding:.55rem 1.1rem;font-size:.9375rem}
+.entete .droite{display:flex;align-items:center;gap:1rem}
+@media (max-width:640px){.entete .lien-contact{display:none}.bouton-petit{padding:.5rem .85rem;font-size:.875rem}}
+.lien-secondaire{display:inline-block;margin-top:1rem;font-weight:600;font-size:.9375rem}
+.heros .lien-secondaire{color:#E6E1D4}
+footer a{color:inherit;text-underline-offset:3px}
+.bouton:active{transform:translateY(1px)}
+.sur-clair .bouton:hover{background:var(--asphalte);color:var(--creme);border-color:var(--asphalte)}
+
+/* Héros */
+.heros{background:var(--asphalte);color:var(--creme);padding:clamp(40px,9vw,96px) 0 clamp(48px,10vw,104px);border-bottom:6px solid var(--orange)}
+.heros .sous-titre{font-size:clamp(1.125rem,3.6vw,1.5rem);line-height:1.4;margin:1.25rem 0 0;max-width:34ch;color:#E6E1D4}
+.heros .detail{max-width:56ch;color:#C9C4B6;margin:1.25rem 0 0}
+.heros .actions{margin-top:2rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem}
+.heros .note{font-size:.9375rem;color:#C9C4B6;margin:0}
+
+/* Sections */
+section{padding:clamp(48px,9vw,88px) 0}
+.sombre{background:var(--asphalte);color:var(--creme)}
+.clair-2{background:var(--creme-2)}
+.intro{max-width:62ch;color:var(--doux);margin:1rem 0 0}
+.sombre .intro{color:#C9C4B6}
+.grille{display:grid;gap:14px;margin-top:2rem;padding:0;list-style:none}
+.carte{background:var(--papier);border:1px solid var(--ligne);border-radius:6px;padding:1.25rem 1.25rem 1.1rem}
+.carte p{margin:.5rem 0 0;color:var(--doux)}
+.sombre .carte{background:#20252B;border-color:#343A42}
+.sombre .carte p{color:#C9C4B6}
+.num{font:700 1rem/1 var(--titre);color:var(--asphalte);background:var(--orange);display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;margin-bottom:.75rem;letter-spacing:0}
+@media (min-width:640px){.grille.deux{grid-template-columns:repeat(2,1fr)}.grille.trois{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:900px){.grille.quatre{grid-template-columns:repeat(4,1fr)}}
+
+/* Aperçu du dossier */
+.apercu{display:grid;gap:2rem;align-items:start}
+.apercu figure{margin:0;position:relative}
+.apercu img{border:1px solid var(--ligne);border-radius:4px;box-shadow:0 10px 30px rgba(22,25,29,.18);background:#fff}
+.apercu figcaption{margin-top:.75rem;font-size:.9375rem;color:var(--doux)}
+.etiquette{display:inline-block;background:var(--asphalte);color:var(--creme);font:700 .8125rem/1 var(--corps);letter-spacing:.1em;text-transform:uppercase;padding:.45rem .7rem;border-radius:3px;border-left:4px solid var(--orange)}
+.puces{padding:0;margin:1rem 0 0;list-style:none}
+.puces li{padding-left:1.4rem;position:relative;margin:.55rem 0}
+.puces li::before{content:"";position:absolute;left:0;top:.62em;width:.6rem;height:.6rem;background:var(--orange);border-radius:1px;transform:rotate(45deg)}
+@media (min-width:900px){.apercu{grid-template-columns:5fr 6fr;gap:3rem}}
+
+/* Exemple calculé */
+.calcul{width:100%;border-collapse:collapse;margin-top:2rem;background:var(--papier);border:1px solid var(--ligne);border-radius:6px;overflow:hidden}
+.calcul caption{text-align:left;font-weight:600;padding:0 0 .6rem;color:var(--doux)}
+.calcul th,.calcul td{padding:.85rem 1rem;text-align:left;border-bottom:1px solid var(--ligne);vertical-align:top}
+.calcul th{font-weight:600;width:56%}
+.calcul td{font-variant-numeric:tabular-nums}
+.calcul tr:last-child th,.calcul tr:last-child td{border-bottom:0;background:var(--asphalte);color:var(--creme);font-weight:700;font-size:1.125rem}
+.calcul small{display:block;font-weight:400;color:var(--doux);margin-top:.15rem}
+@media (max-width:520px){.calcul th,.calcul td{display:block;width:auto;border-bottom:0;padding:.5rem 1rem}.calcul tr{display:block;border-bottom:1px solid var(--ligne);padding:.35rem 0}.calcul tr:last-child{border-bottom:0;background:var(--asphalte);color:var(--creme)}}
+.avis{margin-top:1.25rem;font-size:.9375rem;color:var(--doux);max-width:62ch}
+
+/* Offre */
+.offre{display:grid;gap:2rem;align-items:center}
+.offre .bouton{margin-top:1.25rem}
+@media (min-width:900px){.offre{grid-template-columns:1fr 1fr;gap:3rem}}
+
+/* Étapes */
+.etapes{counter-reset:etape;display:grid;gap:14px;margin:2rem 0 0;padding:0;list-style:none}
+.etapes li{background:var(--papier);border:1px solid var(--ligne);border-radius:6px;padding:1.25rem;position:relative}
+.etapes li::before{counter-increment:etape;content:counter(etape);font:700 1rem/1 var(--titre);background:var(--orange);color:var(--asphalte);display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;margin-bottom:.75rem}
+.etapes h3{margin-bottom:.35rem}.etapes p{margin:0;color:var(--doux)}
+@media (min-width:760px){.etapes{grid-template-columns:repeat(3,1fr)}}
+
+/* Contact */
+.contact-bloc{display:grid;gap:1.5rem}
+.contact-bloc address{font-style:normal;font-size:1.125rem;line-height:1.7}
+.contact-bloc a:not(.bouton){font-weight:600;text-decoration-color:var(--orange);text-decoration-thickness:2px;text-underline-offset:4px}
+footer{background:var(--asphalte);color:#C9C4B6;padding:28px 0 36px;font-size:.875rem}
+footer .contenu{display:flex;flex-wrap:wrap;gap:.75rem 2rem;justify-content:space-between;align-items:center}
+footer img{height:26px;width:auto}
+</style>
+</head>
+<body>
+<a class="evitement" href="#contenu">Passer au contenu</a>
+
+<header class="entete">
+  <div class="contenu">
+    <a href="#haut" aria-label="ORYVEX, retour en haut de la page"><img src="assets/logo-blanc.svg" alt="ORYVEX" width="137" height="34"></a>
+    <div class="droite">
+      <a class="lien-contact" href="mailto:contact@oryvex.ca?subject=Audit%20d%C3%A9tention">contact@oryvex.ca</a>
+      <a class="bouton bouton-petit" href="https://calendar.app.google/NCJbsLBPRxL4H4NJ8" rel="noopener">Réserver une démo de 10 minutes</a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <section class="heros" id="haut" aria-labelledby="titre-principal">
+    <div class="contenu">
+      <p class="sur-titre" style="color:var(--orange)">ORYVEX Détention</p>
+      <h1 id="titre-principal">Chaque heure d'attente prouvée, facturée, encaissée.</h1>
+      <p class="sous-titre">Pour les transporteurs québécois qui attendent aux quais sans être payés.</p>
+      <p class="detail">Nous retrouvons, dans vos propres données, l'attente que vos contrats vous permettent de facturer, et nous préparons la preuve pour chaque arrêt.</p>
+      <div class="actions">
+        <a class="bouton" href="https://calendar.app.google/NCJbsLBPRxL4H4NJ8" rel="noopener">Réserver une démo de 10 minutes</a>
+        <p class="note">Audit gratuit de vos trois derniers mois · sans engagement</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="probleme" aria-labelledby="t-probleme">
+    <div class="contenu">
+      <p class="sur-titre">Le problème</p>
+      <h2 id="t-probleme">Pourquoi cette attente reste rarement facturée</h2>
+      <ul class="grille deux">
+        <li class="carte"><h3>Des heures éparpillées</h3><p>L'arrivée est dans la télématique, le départ sur un connaissement, la confirmation dans un courriel. Personne ne les met côte à côte.</p></li>
+        <li class="carte"><h3>Une clause par client</h3><p>Temps gratuit, taux, tranches, avis obligatoire, délai de réclamation : chaque contrat a ses propres règles.</p></li>
+        <li class="carte"><h3>Personne n'a le temps</h3><p>Le répartiteur gère la journée, la facturation clôt le mois. Vérifier chaque arrêt ne rentre dans l'horaire de personne.</p></li>
+        <li class="carte"><h3>Une contestation sans preuve est perdue</h3><p>Sans heures, sans clause et sans calcul à montrer, le client refuse, et la réclamation s'arrête là.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sombre" id="fuites" aria-labelledby="t-fuites">
+    <div class="contenu">
+      <p class="sur-titre">Les 4 fuites</p>
+      <h2 id="t-fuites">Où l'argent s'échappe</h2>
+      <ol class="grille deux" style="list-style:none;padding:0">
+        <li class="carte"><span class="num" aria-hidden="true">1</span><h3>Jamais facturée</h3><p>L'attente a eu lieu, mais personne ne l'a repérée au moment de facturer.</p></li>
+        <li class="carte"><span class="num" aria-hidden="true">2</span><h3>Facturée trop tard</h3><p>Le délai de réclamation du contrat est passé : le droit existait, il est perdu.</p></li>
+        <li class="carte"><span class="num" aria-hidden="true">3</span><h3>Contestée sans dossier</h3><p>Le client conteste. Sans preuves bien rangées, vous cédez.</p></li>
+        <li class="carte"><span class="num" aria-hidden="true">4</span><h3>Payée au sous-traitant, pas refacturée</h3><p>Vous payez l'attente de votre sous-traitant et ne la refacturez pas à votre client.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="solution" aria-labelledby="t-solution">
+    <div class="contenu">
+      <p class="sur-titre">La solution</p>
+      <h2 id="t-solution">Rassembler, calculer, prouver</h2>
+      <ol class="grille trois" style="list-style:none;padding:0">
+        <li class="carte"><span class="num" aria-hidden="true">1</span><h3>Rassembler</h3><p>Nous réunissons vos exports : télématique ou DCE, factures, paiements, confirmations de tarif et connaissements.</p></li>
+        <li class="carte"><span class="num" aria-hidden="true">2</span><h3>Calculer</h3><p>Un calcul fixe applique la clause de chaque client : temps gratuit, tranches, plafond, avis, délai. Même données, même résultat. Une donnée manquante donne « à vérifier », jamais un montant inventé.</p></li>
+        <li class="carte"><span class="num" aria-hidden="true">3</span><h3>Prouver</h3><p>Chaque arrêt réclamable reçoit un dossier d'une page : preuves des heures, clause citée, calcul pas à pas.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="clair-2" id="dossier" aria-labelledby="t-dossier">
+    <div class="contenu apercu">
+      <div>
+        <p class="sur-titre">Aperçu</p>
+        <h2 id="t-dossier">Un dossier de preuve par arrêt</h2>
+        <p class="intro">Une page, que vous relisez avant tout envoi. Ce qui n'est pas prouvé est signalé en évidence : un arrêt incomplet porte la mention « À compléter avant envoi ».</p>
+        <ul class="puces">
+          <li>Les heures, classées par fiabilité (A, B, C), avec la pièce d'où elles viennent</li>
+          <li>La clause du contrat, son document source et son statut</li>
+          <li>Le calcul pas à pas et le montant</li>
+          <li>Les incohérences et les conditions non prouvées</li>
+        </ul>
+      </div>
+      <figure>
+        <img src="assets/img/dossier-exemple.png" width="1040" height="1177" loading="lazy" decoding="async"
+             alt="Exemple de dossier de contestation d'une page : en-tête du voyage, tableau des preuves d'arrivée et de départ avec la source retenue, clause appliquée, calcul en huit étapes et montant réclamable. Données fictives.">
+        <figcaption><span class="etiquette">Exemple, données fictives</span><br>Page générée par l'outil à partir de données inventées.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="exemple" aria-labelledby="t-exemple">
+    <div class="contenu etroit">
+      <p class="sur-titre">L'exemple calculé</p>
+      <h2 id="t-exemple">Du quai au montant, étape par étape</h2>
+      <table class="calcul">
+        <caption>Clause fictive : 1 h gratuite, 75 $ l'heure, tranches de 15 minutes</caption>
+        <tbody>
+          <tr><th scope="row">Arrivée 8 h 00 · départ 11 h 10</th><td>3 h 10 sur place</td></tr>
+          <tr><th scope="row">Moins 1 h gratuite</th><td>2 h 10 d'attente</td></tr>
+          <tr><th scope="row">Tranches complètes de 15 min<small>Les 10 minutes restantes ne forment pas une tranche.</small></th><td>2 h 00 facturables</td></tr>
+          <tr><th scope="row">2 h × 75 $ l'heure</th><td>150,00&nbsp;$</td></tr>
+        </tbody>
+      </table>
+      <p class="avis">Exemple illustratif avec une clause inventée. Vos contrats ont leurs propres règles, et l'audit applique les vôtres, arrêt par arrêt.</p>
+    </div>
+  </section>
+
+  <section class="clair-2" id="sous-traitance" aria-labelledby="t-st">
+    <div class="contenu etroit">
+      <p class="sur-titre">Sous-traitance</p>
+      <h2 id="t-st">Ce que vous payez, ce que vous facturez, ce que vous encaissez</h2>
+      <p class="intro">Si vous confiez des voyages à des sous-traitants, nous comparons, pour chaque arrêt, trois montants : l'attente que le sous-traitant vous facture, celle que vous avez facturée au client, celle que le client a réellement payée.</p>
+      <ul class="puces">
+        <li>Attente payée au sous-traitant, jamais refacturée au client</li>
+        <li>Sous-traitant qui facture plus que l'attente prouvée</li>
+        <li>Attente facturée que le contrat du client ne permet pas de réclamer</li>
+      </ul>
+      <p class="intro">La marge réelle ne compte que l'argent encaissé.</p>
+    </div>
+  </section>
+
+  <section class="sombre" id="engagements" aria-labelledby="t-eng">
+    <div class="contenu">
+      <p class="sur-titre">Nos engagements</p>
+      <h2 id="t-eng">Ce que nous ne faisons jamais</h2>
+      <ul class="grille deux">
+        <li class="carte"><h3>Aucune heure inventée</h3><p>Chaque heure vient d'une pièce que vous pouvez consulter. Quand une donnée manque, l'arrêt est marqué « à vérifier » et aucun montant n'est produit.</p></li>
+        <li class="carte"><h3>Vous décidez quoi envoyer</h3><p>Rien n'est transmis à vos clients sans votre décision. Les dossiers sont préparés pour votre vérification.</p></li>
+        <li class="carte"><h3>Même calcul chaque fois</h3><p>Le calcul suit des règles fixes, sans intelligence artificielle. Les mêmes données donnent toujours le même résultat, que vous pouvez refaire.</p></li>
+        <li class="carte"><h3>Données confidentielles</h3><p>L'audit se fait en local, sans envoi de vos données à un service d'IA externe. Les identifiants de chauffeurs sont retirés ; les positions GPS ne servent qu'à l'audit.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="offre" aria-labelledby="t-offre">
+    <div class="contenu offre sur-clair">
+      <div>
+        <p class="sur-titre">L'offre</p>
+        <h2 id="t-offre">Un audit gratuit de vos trois derniers mois</h2>
+        <p class="intro">Vous voyez votre propre chiffre, calculé sur vos contrats et vos données. Ensuite, ORYVEX prend 20&nbsp;% de ce qui est réellement encaissé.</p>
+        <a class="bouton" href="https://calendar.app.google/NCJbsLBPRxL4H4NJ8" rel="noopener">Réserver une démo de 10 minutes</a>
+        <br><a class="lien-secondaire" href="mailto:contact@oryvex.ca?subject=Audit%20d%C3%A9tention">ou écrivez-nous</a>
+      </div>
+      <ul class="puces" style="margin:0">
+        <li>L'attente admissible non facturée, séparée de ce qui reste à vérifier</li>
+        <li>Un dossier de preuve pour chaque arrêt encore réclamable</li>
+        <li>La liste de ce qui ne peut pas l'être, et pourquoi (délai dépassé, clause absente)</li>
+        <li>Aucun engagement après l'audit</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="clair-2" id="demarrer" aria-labelledby="t-demarrer">
+    <div class="contenu">
+      <p class="sur-titre">Pour commencer</p>
+      <h2 id="t-demarrer">Trois étapes</h2>
+      <ol class="etapes">
+        <li><h3>Réservez 10 minutes</h3><p>Une démo de 10 minutes, dans l'agenda de Berthrand : nous vérifions ensemble quelles données vous avez.</p></li>
+        <li><h3>Vous autorisez et remettez vos exports</h3><p>Autorisation écrite, puis télématique ou DCE, factures, paiements, confirmations de tarif et connaissements des trois derniers mois.</p></li>
+        <li><h3>Vous recevez votre chiffre</h3><p>Votre résultat et vos dossiers de preuve. Vous décidez quoi envoyer.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="t-contact">
+    <div class="contenu etroit contact-bloc sur-clair">
+      <div>
+        <p class="sur-titre">Contact</p>
+        <h2 id="t-contact">Parlons de vos quais</h2>
+      </div>
+      <address>
+        <strong>Berthrand Masabo</strong><br>
+        ORYVEX<br>
+        <a href="mailto:contact@oryvex.ca?subject=Audit%20d%C3%A9tention">contact@oryvex.ca</a><br>
+        Terrebonne, Québec
+      </address>
+      <div><a class="bouton" href="https://calendar.app.google/NCJbsLBPRxL4H4NJ8" rel="noopener">Réserver une démo de 10 minutes</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="contenu">
+    <img src="assets/logo-blanc.svg" alt="ORYVEX" width="105" height="26">
+    <span>© ORYVEX · Terrebonne, Québec · <a href="politique-de-confidentialite.html">Politique de confidentialité</a></span>
+  </div>
+</footer>
+</body>
+</html>
